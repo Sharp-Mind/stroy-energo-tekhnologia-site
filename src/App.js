@@ -12,11 +12,12 @@ import drops_img from './img/drops.png'
 import tubes_img from './img/tubes.png'
 import './App.css';
 import Movingimage_component from './components/moving_image'
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import fileDownload from './components/download_presentation';
 
-import carousel_pic from './img/carousel_imgs/2.jpg'
+import Carousel from './components/carousel.jsx'
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import ExamplePdf from '../src/file1.pdf'
+
 
 
 // import { addLocale, useLocale } from 'ttag';
@@ -28,45 +29,6 @@ import carousel_pic from './img/carousel_imgs/2.jpg'
 //     addLocale(locale, translationsObj);
 //     useLocale(locale);
 // } 
-
-{/* <OwlCarousel items={3} className='owl-theme' loop margin={10} nav>
-    <div class='item'>    
-        <img src={carousel_pic} alt="" />      
-    </div>
-    <div class='item'>
-        <h4>2</h4>
-    </div>
-    <div class='item'>
-        <h4>3</h4>
-    </div>
-    <div class='item'>
-        <h4>4</h4>
-    </div>
-    <div class='item'>
-        <h4>5</h4>
-    </div>
-    <div class='item'>
-        <h4>6</h4>
-    </div>
-    <div class='item'>
-        <h4>7</h4>
-    </div>
-    <div class='item'>
-        <h4>8</h4>
-    </div>
-    <div class='item'>
-        <h4>9</h4>
-    </div>
-    <div class='item'>
-        <h4>10</h4>
-    </div>
-    <div class='item'>
-        <h4>11</h4>
-    </div>
-    <div class='item'>
-        <h4>12</h4>
-    </div>
-</OwlCarousel>; */}
 
 
 function App() {  return (
@@ -107,7 +69,7 @@ function App() {  return (
                       <img src={email_png} alt="" />
                       </div>    
                       
-                      <p><a href="mailto:abcdef@google.ru">abcdef@google.ru</a></p>
+                      <p><a href="mailto:setinform@bk.ru">setinform@bk.ru</a></p>
                     </div>
                   </div>
                   
@@ -118,16 +80,16 @@ function App() {  return (
 
                 <div className='under_header_div'>
                 
-                  <div className='button_div mainpage' onclick="alert('Кнопка нажата')"><p><a href='#main'>{ t('Главная') }</a></p></div>
-                  <div className='button_div aboutcompany' onclick="alert('Кнопка нажата')"><p><a href='#about_us'>{ t('О компании') }</a></p></div>
-                  <div className='button_div ourjobs' onclick="alert('Кнопка нажата')"><p><a href='#our_jobs'>{ t('Наши работы') }</a></p></div>
-                  <div className='button_div contacts' onclick="alert('Кнопка нажата')"><p><a href='#contacts'>{ t('Контакты') }</a></p></div>                 
+                  <div className='button_div mainpage' onClick="alert('Кнопка нажата')"><p><a href='#main'>{ t('Главная') }</a></p></div>
+                  <div className='button_div aboutcompany' onClick="alert('Кнопка нажата')"><p><a href='#about_us'>{ t('О компании') }</a></p></div>
+                  <div className='button_div ourjobs' onClick="alert('Кнопка нажата')"><p><a href='#our_jobs'>{ t('Наши работы') }</a></p></div>
+                  <div className='button_div contacts' onClick="alert('Кнопка нажата')"><p><a href='#contacts'>{ t('Контакты') }</a></p></div>                 
                
                 </div>
                 
 
                 <div className='moving_image_div'>
-                  <Movingimage_component />                  
+                  {/* <Movingimage_component />                   */}
                 </div>
                 
                 <div className='middle_line'>
@@ -145,9 +107,7 @@ function App() {  return (
                       <p className='present_text_2'>по работе с инженерными системами:</p>
                     {/* </div> */}
                 </div>
-                {/* <div className='middle_line'>
-                  <img className='middle_line_img' src={pixel_line} alt="" />                  
-                </div> */}
+               
 
 
                 <div className='middle_jobicons_1'>              
@@ -220,61 +180,34 @@ function App() {  return (
                     </div>
                 </div>
 
-                {/* <AwesomeSlider /> */}
-                {/* <AutoplaySlider /> */}
-                {/* <img src={carousel_pic}></img> */}
-                <div className='carousel_container'>                
                 
-                  {/* <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src={carousel_pic} class="d-block w-100" alt="..."></img>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="..."></img>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="..."></img>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div> */}
+                <div className='carousel_container'>              
 
-                  {/* <OwlCarousel></OwlCarousel> */}
+                  <Carousel />
+                 
 
+                </div>
+
+                <div>                 
+
+                  <div>                          
+                    <div className='button_div file_download' onClick="alert('Кнопка нажата')">
+                        <p>
+                          <a 
+                            href={ExamplePdf}
+                            download="Референт-лист СЭТ"
+                            target="_blank"
+                            rel="noreferrer"
+                          >{ t('Скачать презентацию') }</a></p></div>                    
+                    </div>
+                  
                 </div>
 
               </div>
               
             </div>
           
-            {/* <header className="App-header"> */}
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
-              {/* <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a> */}
-                
-            {/* </header> */}
+            
           </div>       
         </div>
       </div> 
