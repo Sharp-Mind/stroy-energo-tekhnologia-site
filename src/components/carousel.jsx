@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import MyDialog from './modal_window';
 
 import carousel_pic_1 from '../img/carousel_imgs/1.jpg'
 import carousel_pic_2 from '../img/carousel_imgs/2.jpg'
@@ -11,7 +12,9 @@ import carousel_pic_7 from '../img/carousel_imgs/7.jpg'
 import carousel_pic_8 from '../img/carousel_imgs/8.jpg'
 import carousel_pic_9 from '../img/carousel_imgs/9.jpg'
 import carousel_pic_10 from '../img/carousel_imgs/10.jpg'
+import Item from 'antd/es/list/Item';
 
+const doClick = (itemID) => {console.log(itemID)}
 
 export default () => (
     <Carousel 
@@ -26,6 +29,7 @@ export default () => (
         transitionTime="2000"
         interval="3000"
         dynamicHeight="True"
+        // onClickItem={doClick(Item.id)}
         >
 
         <div className='carousel_item'>

@@ -12,7 +12,9 @@ import drops_img from './img/drops.png'
 import tubes_img from './img/tubes.png'
 import './App.css';
 import Movingimage_component from './components/moving_image'
-import fileDownload from './components/download_presentation';
+import moving_pic from './img/moving_image_2.jpg'
+import InfiniteLooper from './components/infinite_looper.tsx';
+import MyDialog from './components/modal_window';
 
 import Carousel from './components/carousel.jsx'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -90,6 +92,12 @@ function App() {  return (
 
                 <div className='moving_image_div'>
                   {/* <Movingimage_component />                   */}
+                  <InfiniteLooper speed='20'direction='left'>
+                  <div className="contentBlock contentBlock--two">
+                    <img src={moving_pic} type=""></img>
+                    <img src={moving_pic} type=""></img>          
+                  </div>
+                  </InfiniteLooper>
                 </div>
                 
                 <div className='middle_line'>
@@ -200,6 +208,7 @@ function App() {  return (
                             rel="noreferrer"
                           >{ t('Скачать презентацию') }</a></p></div>                    
                     </div>
+                    {/* <MyDialog /> */}
                   
                 </div>
 
