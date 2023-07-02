@@ -10,9 +10,20 @@ import vent_img from './img/vent.png'
 import snowflake_img from './img/snowflake.png'
 import drops_img from './img/drops.png'
 import tubes_img from './img/tubes.png'
+import dowload_png from './img/download.png'
 import './App.css';
 import Movingimage_component from './components/moving_image'
-import moving_pic from './img/moving_image_2.jpg'
+import background_city_pic from './img/city_background.jpg'
+import moving_pic_part_1 from './img/image_part_001.jpg'
+import moving_pic_part_2 from './img/image_part_002.jpg'
+import moving_pic_part_3 from './img/image_part_003.jpg'
+import moving_pic_part_4 from './img/image_part_004.jpg'
+import about_us_pic from './img/1675837596_foni-club-p-fon-cherno-belii-gradient-vektor-4.png'
+
+import bottom_phone_pic from './img/phone_2.png'
+import bottom_email_pic from './img/email2.png'
+import bottom_map_pic from './img/map.png'
+
 import InfiniteLooper from './components/infinite_looper.tsx';
 import MyDialog from './components/modal_window';
 
@@ -91,13 +102,17 @@ function App() {  return (
                 
 
                 <div className='moving_image_div'>
-                  {/* <Movingimage_component />                   */}
-                  <InfiniteLooper speed='20'direction='left'>
-                  <div className="contentBlock contentBlock--two">
-                    <img src={moving_pic} type=""></img>
-                    <img src={moving_pic} type=""></img>          
+                  <Movingimage_component />                  
+                  {/* <InfiniteLooper speed='20'direction='left'>
+                  <div className="contentBlock contentBlock--one">
+                    <div></div>
+                    <img src={moving_pic_part_1} /> 
+
+                    <img src={moving_pic_part_2} />
+                    <img src={moving_pic_part_3} />
+                    <img src={moving_pic_part_4} />
                   </div>
-                  </InfiniteLooper>
+                  </InfiniteLooper> */}
                 </div>
                 
                 <div className='middle_line'>
@@ -116,7 +131,7 @@ function App() {  return (
                     {/* </div> */}
                 </div>
                
-
+              </div>
 
                 <div className='middle_jobicons_1'>              
 
@@ -187,38 +202,128 @@ function App() {  return (
                     </div>
                     </div>
                 </div>
-
                 
-                <div className='carousel_container'>              
+                <div className='carousel_container'>            
+                  <Carousel />                 
+                </div>                           
 
-                  <Carousel />
-                 
+                <div className='middle_div'>
 
-                </div>
+                  <div className='about_us_field'>
+                    <p>О нас</p>
+                  </div> 
 
-                <div>                 
-
-                  <div>                          
-                    <div className='button_div file_download' onClick="alert('Кнопка нажата')">
-                        <p>
-                          <a 
-                            href={ExamplePdf}
-                            download="Референт-лист СЭТ"
-                            target="_blank"
-                            rel="noreferrer"
-                          >{ t('Скачать презентацию') }</a></p></div>                    
+                  <div className='button_div file_download' onClick="alert('Кнопка нажата')">
+                    <div>
+                      <img src={dowload_png} alt="" />
                     </div>
-                    {/* <MyDialog /> */}
+                    <div>
+                    <p>                            
+                        <a 
+                          href={ExamplePdf}
+                          download="Референт-лист СЭТ"
+                          target="_blank"
+                          rel="noreferrer"
+                        >{ t('Скачать презентацию') }</a></p>
+                    </div>                        
+                  </div>                    
+                    
+                  <div className='about_us_text'>
+                    <p className='about_us_p1'>
+                      Наша компания занимается инженерными системами такими как: Отопление,вентиляция,кондиционирование, водоснабжение,канализация.
+                      У нас работают ответственные, грамотные и обученные сотрудники, знающие каждый свою работу в системах инженерии. 
+                      Каждый наш сотрудник снабжён качественными строительными ресурсами для выполнения точной и быстрой работы. 
+                      Именно поэтому в истории нашей компании имеются объекты, которые служат для нас предметом гордости! 
+                      
+                    </p>
+
+                    <div className='about_us_pic'>
+                      {/* <img src={about_us_pic} alt="" /> */}
+                      <img className='bottom_line_img' src={pixel_line} alt="" />
+                    </div>
+
+                    <p className='about_us_p2'>
+                      Мы всегда рады к сотрудничеству с новыми клиентами и будем рады делать для вас качественную работу!
+                    </p>
+                  </div>
+
+                  <div className='city_background_pic_container'>
+                    {/* <div className='city_background_pic_div'></div> */}
+                    <img src={background_city_pic} alt="" />
+                  </div>
                   
+                </div>
+              <div className='bottom_div'>
+                
+                <div className='bottom_div_contacts'>
+                    <div className='bd_contacts_row'>
+                    <div className='contact_type'>
+                          <div className='contact_type_pic'>
+                            <img src={bottom_email_pic} alt="" />
+                          </div>
+                          <div className='contact_type_label'>
+                            <p>E-mail</p>
+                          </div>
+                        </div>
+                        <div className='contact_data'>
+                          <p>sliva73@bk.ru+</p>
+                        </div>
+                    </div>
+
+                    <div className='bd_contacts_row'>
+                        <div className='contact_type'>
+                          <div className='contact_type_pic'>
+                            <img src={bottom_phone_pic} alt="" />
+                          </div>
+                          <div className='contact_type_label'>
+                            <p>Телефон</p>
+                          </div>
+                        </div>
+                        <div className='contact_data'>
+                          <p>7 909 906-88-97</p>
+                        </div>
+                    </div>
+
+                    <div className='bd_contacts_row'>
+                        <div className='contact_type'>
+                        <div className='contact_type_pic'>
+                            <img src={bottom_map_pic} alt="" />
+                          </div>
+                          <div className='contact_type_label'>
+                            <p>Адрес</p>
+                          </div>
+                        </div>
+                        <div className='contact_data'>
+                        <p>
+                          127254, г. Москва, Огородный проезд, дом 5, строение 4, этаж 2, помещение 202 (изм. 02.10.2018г.)
+                          <br></br>
+                          ИНН 7715831341/ КПП 771501001
+                        </p>
+                        </div>
+                    </div>                   
+                                    
                 </div>
 
               </div>
+
+            
+
+                  {/* <MyDialog /> */}
+                
+               
+
+              
               
             </div>
           
             
           </div>       
         </div>
+
+        <div className='footer'>
+          <p>2023</p>   
+        </div>
+        
       </div> 
     </div>
   );

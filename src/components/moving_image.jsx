@@ -17,6 +17,15 @@ export default class Movingimage_component extends Component {
                 <img className='background_size_pic' src={moving_pic} alt="" />                      
                 <img className='moving_pic_1' src={moving_pic} alt="" />
                 <img className='moving_pic_2' src={moving_pic} alt="" />
+                {/* <img className='background_size_pic' src={moving_pic} alt="" /> */}
+                
+                {/* <div className='belt_pic_div_1'> */}
+
+                    {/* <img src={moving_pic} style="visibility: hidden" alt="" /> */}
+                {/* </div> */}
+                {/* <div className='belt_pic_div_2'> */}
+                    {/* <img src={moving_pic} style="visibility: hidden" alt="" /> */}
+                {/* </div> */}
             </div>
         )
 

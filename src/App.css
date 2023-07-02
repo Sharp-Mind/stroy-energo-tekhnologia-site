@@ -8,6 +8,10 @@
   font-weight: 400;
 }
 
+/* .font-bad-script {
+  font-family: 'Bad Script', cursive;
+} */
+
 /* body {
   background: url(./img/pipes3.png) repeat;
   -moz-background-size: 100%; 
@@ -17,9 +21,15 @@
   height: 3000px;
 } */
 
+body{ 
+  overflow-x: hidden;
+  min-width: 600px;
+}
 
 .App {
   text-align: center;
+  /* overflow: hidden; */
+  font-family: 'Bad Script', cursive;
 }
 
 .App-logo {
@@ -103,7 +113,8 @@
 
 .content {
   background-color: white;
-  height: 3000px;
+  /* height: 3000px; */
+  height: auto;
   min-height: 100vh;
   /* max-width: 100vw; */
   padding: 30px;
@@ -309,6 +320,33 @@
   animation-timing-function: linear;
 }
 
+.belt_pic_div_1 {
+  background-image: url('./img/moving_image_2.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 300px;
+
+  position: absolute;
+  animation: move 30s infinite;
+  animation-timing-function: linear;
+  animation-delay: -15s;
+}
+
+.belt_pic_div_2 {
+  background-image: url('./img/moving_image_2.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 300px;
+
+  position: absolute;
+  animation: move 30s infinite;
+  animation-timing-function: linear;
+}
+
 .background_size_pic {
   width: 100vw;
   height: auto;
@@ -401,6 +439,16 @@
   margin-left: 10vw;
 }
 
+.moving_image_div {
+  overflow: hidden;
+}
+
+.belt_pic {
+  /* overflow: hidden; */
+  display: flex;
+  /* height: 250px; */
+}
+
 .belt_pic_2 {
   display:block;
   width: 100vw;
@@ -437,6 +485,8 @@
 
 .carousel_container {
   padding: 100px;
+  padding-bottom: 10px;
+  font-family: "BitterRegular";
 }
 
 .carousel-root {
@@ -489,4 +539,147 @@
 
 .next {
   margin-left: 1rem;
+}
+
+.about_us_field p {
+  color: black;
+  font-size: 40px;
+}
+
+.contaier_button {
+  display: flex;
+}
+
+.button_div {
+  display: flex;
+  padding: 10px;
+  margin: auto;
+}
+
+.button_div p {
+  margin-bottom: 0;
+
+}
+
+.file_download img {
+  width: 35px;
+  height: 35px;
+}
+
+.about_us_text {
+  padding-top: 10vw;
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
+.about_us_p1{
+  color: black;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.bottom_line_img {
+  width: 70vw;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.about_us_p2 {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* 
+.about_us_pic img {
+  height: 10vh;
+} */
+
+/* .about_us_pic {
+  height: 300px;
+  background-image: url('./img/1675837596_foni-club-p-fon-cherno-belii-gradient-vektor-4.png');
+  background-size: contain;
+  background-repeat:inherit
+
+} */
+
+.city_background_pic_container {
+ display: flex;
+ height: 500px;
+ justify-content: center;
+ 
+}
+/* .city_background_pic_div {
+  width: auto;
+  height: 300px;
+  background-image: url('./img/city_background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+} */
+
+.bottom_div_contacts {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+}
+
+.bd_contacts_row {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_div_contacts p{
+  color: black;
+  font-size: 25px;
+ 
+}
+
+.contact_type{
+  display: flex;
+  padding-right: 10vw;
+}
+
+.contact_type p{
+  color: black;
+  font-size: 25px;
+  width: 100px ;
+  text-align: left;
+}
+
+.contact_type_pic img{
+  height: 30px;
+  padding-right: 10px;
+}
+
+.contact_data {
+  /* min-width: min-content; */
+  min-width: 400px;
+  display: flex;
+  justify-content: left;
+}
+
+.contact_data p{
+  text-align: left;
+}
+
+.footer {
+  background-color: #367669;
+  height: 100px;
+  width: 100vw;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'BitterRegular';
+}
+
+.footer p {
+  color: white;
+  font-size: 25px;
 }
