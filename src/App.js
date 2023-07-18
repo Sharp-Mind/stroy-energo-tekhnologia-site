@@ -17,6 +17,7 @@ import CurrentDate_component from './components/current_year';
 import LanguageSwitcher from './components/lang_switcher';
 
 import { useTranslation } from 'react-i18next';
+import React, { useEffect } from 'react';
 
 import background_city_pic from './img/city_background.jpg'
 import moving_pic_part_1 from './img/image_part_001.jpg'
@@ -54,16 +55,16 @@ import ExamplePdf from '../src/file1.pdf'
 function App() {
 
   const { t, i18n } = useTranslation()
+  
+  useEffect(() => {
+    document.title = t('Page_Title')
+  }, []);
+  
 
   return (  
     
     <div className='background_pic_div'>
-       {/* <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
-          <option>Choose language</option>
-          <option value="uz">Uzbek</option>
-          <option value="ru">Russian</option>
-          <option value="en">English</option>
-        </select> */}
+      
       <div className='background_pic_wrapper'>
         
       

@@ -33,6 +33,7 @@ i18n
                     "Address_data_bank_creds": "ИНН 7715831341/ КПП 771501001",
                     "Developed by": "Разработка сайта: ",
                     "Developer_name": "Павел Плетнёв",
+                    "Page_Title": "СтройЭнергоТехнология - проектирование инженерных систем"
                    
                 }
             },
@@ -62,6 +63,7 @@ i18n
                     "Address_data_bank_creds": "ITN: 7715831341/ Tax Registration Reason Code (KPP): 771501001",
                     "Developed by": "Website developed by: ",
                     "Developer_name": "Pavel Pletnev",
+                    "Page_Title": "StroyEnergoTechnology - work with engineering systems"
                    
                 }
             }
