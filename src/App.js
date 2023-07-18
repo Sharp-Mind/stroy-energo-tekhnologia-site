@@ -252,7 +252,7 @@ function App() {
                       <img src={dowload_png} alt="" />
                     </div>
                     <div>
-                    <p>                            
+                    <p className='download_button_p'>                            
                         <a 
                           href={ExamplePdf}
                           download={t('Download_file_name')}
@@ -325,14 +325,24 @@ function App() {
                             <p>{t('Address')}</p>
                           </div>
                         </div>
-                        <div className='bd_contact_data'>
+                        <div className='bd_contact_data hidden_on_mobile'>
                         <p>
                           {t('Address_data')}
                           <br></br>
                           {t('Address_data_bank_creds')}
                         </p>
                         </div>
-                    </div>                   
+                    </div> 
+
+                    <div className='bd_contacts_row mobile_variant'>
+                      <div className='bd_contact_data'>
+                        <p>
+                          {t('Address_data')}
+                          <br></br>
+                          {t('Address_data_bank_creds')}
+                        </p>
+                        </div>
+                    </div>                 
                                     
                 </div>
 
