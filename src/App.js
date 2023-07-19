@@ -38,20 +38,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ExamplePdf from '../src/file1.pdf'
 
 
-
-// import { addLocale, useLocale } from 'ttag';
-// const locale = getLocale(); // fetch locale code from cookies, url, localStorage e.t.c
-
-// if (locale !== 'ru') {
-//     // load json file with translations
-//     const translationsObj = require(`../i18n/${locale}.po.json`);
-//     addLocale(locale, translationsObj);
-//     useLocale(locale);
-// }
-
-
-// var langState = 'en'
-
 function App() {
 
   const { t, i18n } = useTranslation()

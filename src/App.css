@@ -5,9 +5,10 @@
   font-weight: 400;
 }
 
+html,
 body{ 
-  /* overflow-x: hidden; */
-  min-width: 600px;  
+  overflow-x: hidden;
+  min-width: 600px;   
 }
 
 .App {
@@ -517,10 +518,6 @@ body{
  height: 500px;
  justify-content: center;
  
-}
-
-.background_pic_div {
-  overflow: hidden;
 }
 
 .upper_div_contacts {
