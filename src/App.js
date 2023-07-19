@@ -35,7 +35,7 @@ import MyDialog from './components/modal_window';
 
 import Carousel from './components/carousel.jsx'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import ExamplePdf from '../src/file1.pdf'
+// import ExamplePdf from '../public/file1.pdf'
 
 
 function App() {
@@ -140,22 +140,16 @@ function App() {
                 </div>
                 <a name="about_us"></a>
                 <div className='middle_strings'>
-                     {/* <div className='middle_string'>                  */}
-                     <p className='present_text'>{t('Present_text_row_1')}</p>
-                    {/* </div> */}
-                    {/* <div className='middle_string'>  */}
-                      <p className='company_name'>{t('Present_text_row_2')}</p>
-                    {/* </div> */}
-                    {/* <div className='middle_string'>  */}
-                      <p className='present_text_2'>{t('Present_text_row_3')}</p>
-                    {/* </div> */}
+                    
+                  <p className='present_text'>{t('Present_text_row_1')}</p>            
+                  <p className='company_name'>{t('Present_text_row_2')}</p>
+                  <p className='present_text_2'>{t('Present_text_row_3')}</p>
+                    
                 </div>
                
               </div>
 
-                <div className='middle_jobicons_1'>              
-
-                  
+                <div className='middle_jobicons_1'> 
                   <div className='middle_jobicons_block'>
                     
                     <div className='icon_and_text'>                 
@@ -241,7 +235,7 @@ function App() {
                     <div>
                     <p className='download_button_p'>                            
                         <a 
-                          href={ExamplePdf}
+                          href='../public/file1.pdf'
                           download={t('Download_file_name')}
                           target="_blank"
                           rel="noreferrer"
@@ -254,8 +248,7 @@ function App() {
                       {t('About us text')}                    
                     </p>
 
-                    <div className='about_us_pic'>
-                      {/* <img src={about_us_pic} alt="" /> */}
+                    <div className='about_us_pic'>                      
                       <img className='bottom_line_img' src={pixel_line} alt="" />
                     </div>
 
@@ -265,8 +258,7 @@ function App() {
                   </div>
 
                   <div className='city_background_pic_container'>
-                    <a name="contacts"></a>
-                    {/* <div className='city_background_pic_div'></div> */}
+                    <a name="contacts"></a>                    
                     <img src={background_city_pic} alt="" />
                   </div>
                   
