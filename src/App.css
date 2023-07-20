@@ -744,6 +744,14 @@ body{
     height: calc(5px + 2vw);
   }
 
+  .thumbs-wrapper {
+    display: none;
+  }
+
+  .about_us_field {
+    padding-top: 30px;
+  }
+
   .middle_line {    
     display: flex;
     justify-content: center;
