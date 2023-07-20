@@ -18,6 +18,7 @@ import LanguageSwitcher from './components/lang_switcher';
 
 import { useTranslation } from 'react-i18next';
 import React, { useEffect } from 'react';
+import process from "process";
 
 import background_city_pic from './img/city_background.jpg'
 import moving_pic_part_1 from './img/image_part_001.jpg'
@@ -35,7 +36,15 @@ import MyDialog from './components/modal_window';
 
 import Carousel from './components/carousel.jsx'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import ExamplePdf from '../public/file1.pdf'
+
+
+var examplePdf = ''
+
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  examplePdf = '../src/file1.pdf'
+} else {
+  examplePdf = 'file1.pdf'
+}
 
 
 function App() {
@@ -232,10 +241,10 @@ function App() {
                     <div>
                       <img src={dowload_png} alt="" />
                     </div>
-                    <div>
+                    <div className='download_button_p_div'>
                     <p className='download_button_p'>                            
                         <a 
-                          href='../public/file1.pdf'
+                          href={examplePdf}
                           download={t('Download_file_name')}
                           target="_blank"
                           rel="noreferrer"
@@ -291,7 +300,7 @@ function App() {
                           </div>
                         </div>
                         <div className='bd_contact_data'>
-                          <p>7 909 906-88-97</p>
+                          <p className='phone_num'>+7 909 906-88-97</p>
                         </div>
                     </div>
 
@@ -304,8 +313,8 @@ function App() {
                             <p>{t('Address')}</p>
                           </div>
                         </div>
-                        <div className='bd_contact_data hidden_on_mobile'>
-                        <p>
+                        <div className='bd_contact_data'>
+                        <p className='bd_contact_data_addr_p'>
                           {t('Address_data')}
                           <br></br>
                           {t('Address_data_bank_creds')}
@@ -313,15 +322,7 @@ function App() {
                         </div>
                     </div> 
 
-                    <div className='bd_contacts_row mobile_variant'>
-                      <div className='bd_contact_data'>
-                        <p>
-                          {t('Address_data')}
-                          <br></br>
-                          {t('Address_data_bank_creds')}
-                        </p>
-                        </div>
-                    </div>                 
+                         
                                     
                 </div>
 
@@ -346,7 +347,7 @@ function App() {
           <CurrentDate_component />
           <div className='developer_info'>
             <div className='developer_info_row'>
-              <p>
+              <p className='developer_info_row_developed_by'>
                 {t('Developed by')}
               </p>
               <a href='https://career.habr.com/redlance'>
