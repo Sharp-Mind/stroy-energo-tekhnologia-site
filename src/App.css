@@ -724,17 +724,17 @@ html {
     border-bottom: #282c34;
   }
 
-  /* .background_size_pic {
+  .background_size_pic {
     width: 200vw;
-  } */
+  }
 
-  /* .moving_pic_1 {
+  .moving_pic_1 {
     width: 200vw;
   }
 
   .moving_pic_2 {
     width: 200vw;
-  } */
+  }
 
   .ud_contact_data p{
     font-size: calc(5px + 2vmin);
@@ -839,17 +839,6 @@ html {
   .bottom_div_contacts p{
     font-size: 20px;
   }
-
-  /* .mobile_variant {
-    display: flex;
-    width: 100vw;
-  } */
-
-  /* .mobile_variant p {
-    width: 80vw;
-    text-align: justify;
-    word-wrap: break-word;
-  } */
 
   .bd_contact_data {
     display: flex;
