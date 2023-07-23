@@ -91,7 +91,7 @@ function App() {
                       </div>                      
 
                       <div className='ud_contact_data'>
-                        <p>7 909 906-88-97</p>
+                        <p>+7 909 906-88-97</p>
                       </div>              
                       
                     </div>

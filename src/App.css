@@ -5,12 +5,16 @@
   font-weight: 400;
 }
 
-html,
-body{ 
-  overflow-x: hidden;
+/* html, */
+/* body {  */
+  /* overflow-x: hidden; */
   /* min-width: 600px; */
-  position: relative;
-  height: fit-content;   
+  /* position: absolute; */
+  /* height: auto; */
+/* } */
+
+html {
+  overflow-x: hidden;
 }
 
 .App {
@@ -20,7 +24,7 @@ body{
 }
 
 
-.App-header{
+.App-header{  overflow-y: scroll;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -251,9 +255,9 @@ body{
   height: auto;
 
   position: absolute;
-  animation: move 30s infinite;
+  animation: move 40s infinite;
   animation-timing-function: linear;
-  animation-delay: -15s;
+  animation-delay: -20s;
 }
 
 .moving_pic_2 {
@@ -261,11 +265,11 @@ body{
   height: auto;
 
   position: absolute;
-  animation: move 30s infinite;
+  animation: move 40s infinite;
   animation-timing-function: linear;
 }
 
-.belt_pic_div_1 {
+/* .belt_pic_div_1 {
   background-image: url('./img/moving_image_2.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -290,7 +294,7 @@ body{
   position: absolute;
   animation: move 30s infinite;
   animation-timing-function: linear;
-}
+} */
 
 .background_size_pic {
   width: 100vw;
@@ -381,22 +385,23 @@ body{
   margin-left: 10vw;
 }
 
-.moving_image_div {
+/* .moving_image_div {
   overflow: hidden;
-}
+} */
 
 .belt_pic {  
-  display: flex;  
+  display: flex;
+  width: 100vw;  
 }
 
-.belt_pic_2 {
+/* .belt_pic_2 {
   display:block;
   width: 100vw;
   margin: 0 auto;
   height: auto;
   min-height: 500px;
   background-color: #505050;
-}
+} */
 
 .moving_gallery_item {
   height: 400px;
@@ -719,17 +724,17 @@ body{
     border-bottom: #282c34;
   }
 
-  .background_size_pic {
+  /* .background_size_pic {
     width: 200vw;
-  }
+  } */
 
-  .moving_pic_1 {
+  /* .moving_pic_1 {
     width: 200vw;
   }
 
   .moving_pic_2 {
     width: 200vw;
-  }
+  } */
 
   .ud_contact_data p{
     font-size: calc(5px + 2vmin);
