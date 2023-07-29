@@ -17,8 +17,6 @@ import CurrentDate_component from './components/current_year';
 import LanguageSwitcher from './components/lang_switcher';
 
 import { useTranslation } from 'react-i18next';
-import React, { useEffect } from 'react';
-import process from "process";
 
 import background_city_pic from './img/city_background.jpg'
 import moving_pic_part_1 from './img/image_part_001.jpg'
@@ -36,30 +34,38 @@ import MyDialog from './components/modal_window';
 
 import Carousel from './components/carousel.jsx'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import ExamplePdf from '../src/file1.pdf'
+
+import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 
-var examplePdf = ''
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  examplePdf = '../src/file1.pdf'
-} else {
-  examplePdf = 'file1.pdf'
-}
+// import { addLocale, useLocale } from 'ttag';
+// const locale = getLocale(); // fetch locale code from cookies, url, localStorage e.t.c
 
+// if (locale !== 'ru') {
+//     // load json file with translations
+//     const translationsObj = require(`../i18n/${locale}.po.json`);
+//     addLocale(locale, translationsObj);
+//     useLocale(locale);
+// }
+
+
+// var langState = 'en'
 
 function App() {
 
   const { t, i18n } = useTranslation()
-  
-  useEffect(() => {
-    document.title = t('Page_Title')
-  }, []);
-  
 
   return (  
     
     <div className='background_pic_div'>
-      
+       {/* <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
+          <option>Choose language</option>
+          <option value="uz">Uzbek</option>
+          <option value="ru">Russian</option>
+          <option value="en">English</option>
+        </select> */}
       <div className='background_pic_wrapper'>
         
       
@@ -90,9 +96,9 @@ function App() {
                         </div>
                       </div>                      
 
-                      <div className='ud_contact_data'>
-                        <p>+7 909 906-88-97</p>
-                      </div>              
+                      <div className='ud_contact_data'>                        
+                        <p><a href="tel:+79099068897" className='phonenum'>+7 (909) 906-88-97</a></p>
+                      </div>                    
                       
                     </div>
                     <div className='ud_contacts_row'>
@@ -131,7 +137,8 @@ function App() {
                 
 
                 <div className='moving_image_div'>
-                  <Movingimage_component />                  
+                  <Movingimage_component /> 
+                                   
                   {/* <InfiniteLooper speed='20'direction='left'>
                   <div className="contentBlock contentBlock--one">
                     <div></div>
@@ -147,18 +154,20 @@ function App() {
                 <div className='middle_line'>
                   <img className='middle_line_img' src={pixel_line} alt="" />                  
                 </div>
+                
                 <a name="about_us"></a>
-                <div className='middle_strings'>
-                    
-                  <p className='present_text'>{t('Present_text_row_1')}</p>            
-                  <p className='company_name'>{t('Present_text_row_2')}</p>
-                  <p className='present_text_2'>{t('Present_text_row_3')}</p>
-                    
+                
+                <div className='middle_strings'>                      
+                    <p className='present_text'>{t('Present_text_row_1')}</p>                   
+                    <p className='company_name'>{t('Present_text_row_2')}</p>                    
+                    <p className='present_text_2'>{t('Present_text_row_3')}</p>                    
                 </div>
                
               </div>
 
-                <div className='middle_jobicons_1'> 
+                <div className='middle_jobicons_1'>              
+
+                  
                   <div className='middle_jobicons_block'>
                     
                     <div className='icon_and_text'>                 
@@ -241,10 +250,10 @@ function App() {
                     <div>
                       <img src={dowload_png} alt="" />
                     </div>
-                    <div className='download_button_p_div'>
+                    <div>
                     <p className='download_button_p'>                            
                         <a 
-                          href={examplePdf}
+                          href={ExamplePdf}
                           download={t('Download_file_name')}
                           target="_blank"
                           rel="noreferrer"
@@ -267,7 +276,7 @@ function App() {
                   </div>
 
                   <div className='city_background_pic_container'>
-                    <a name="contacts"></a>                    
+                    <a name="contacts"></a>                   
                     <img src={background_city_pic} alt="" />
                   </div>
                   
@@ -300,7 +309,7 @@ function App() {
                           </div>
                         </div>
                         <div className='bd_contact_data'>
-                          <p className='phone_num'>+7 909 906-88-97</p>
+                          <p><a href="tel:+79099068897" className='phonenum'>+7 (909) 906-88-97</a></p>
                         </div>
                     </div>
 
@@ -313,8 +322,8 @@ function App() {
                             <p>{t('Address')}</p>
                           </div>
                         </div>
-                        <div className='bd_contact_data'>
-                        <p className='bd_contact_data_addr_p'>
+                        <div className='bd_contact_data hidden_on_mobile'>
+                        <p>
                           {t('Address_data')}
                           <br></br>
                           {t('Address_data_bank_creds')}
@@ -322,7 +331,15 @@ function App() {
                         </div>
                     </div> 
 
-                         
+                    <div className='bd_contacts_row mobile_variant'>
+                      <div className='bd_contact_data'>
+                        <p>
+                          {t('Address_data')}
+                          <br></br>
+                          {t('Address_data_bank_creds')}
+                        </p>
+                        </div>
+                    </div>                 
                                     
                 </div>
 
@@ -342,12 +359,11 @@ function App() {
           </div>       
         </div>
 
-        <div className='footer'>
-          {/* <p>2023</p>    */}
+        <div className='footer'>         
           <CurrentDate_component />
           <div className='developer_info'>
             <div className='developer_info_row'>
-              <p className='developer_info_row_developed_by'>
+              <p>
                 {t('Developed by')}
               </p>
               <a href='https://career.habr.com/redlance'>
