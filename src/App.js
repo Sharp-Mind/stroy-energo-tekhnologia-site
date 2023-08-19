@@ -1,7 +1,6 @@
 import logo from './img/logo.png';
 import phone_png from './img/phonereceiver_99743.png'
 import email_png from './img/email.png'
-import header_img from './img/background_pipes.jpg'
 import pixel_line from './img/pixel_line.png'
 import warm_img from './img/warm.png'
 import vent_img from './img/vent.png'
@@ -9,7 +8,6 @@ import snowflake_img from './img/snowflake.png'
 import drops_img from './img/drops.png'
 import tubes_img from './img/tubes.png'
 import dowload_png from './img/download.png'
-import lang_switcher_img from './img/lang_switcher.png'
 import './App.css';
 
 import Movingimage_component from './components/moving_image'
@@ -19,39 +17,17 @@ import LanguageSwitcher from './components/lang_switcher';
 import { useTranslation } from 'react-i18next';
 
 import background_city_pic from './img/city_background.jpg'
-import moving_pic_part_1 from './img/image_part_001.jpg'
-import moving_pic_part_2 from './img/image_part_002.jpg'
-import moving_pic_part_3 from './img/image_part_003.jpg'
-import moving_pic_part_4 from './img/image_part_004.jpg'
-import about_us_pic from './img/1675837596_foni-club-p-fon-cherno-belii-gradient-vektor-4.png'
 
 import bottom_phone_pic from './img/phone_2.png'
 import bottom_email_pic from './img/email2.png'
 import bottom_map_pic from './img/map.png'
 
-import InfiniteLooper from './components/infinite_looper.tsx';
 import MyDialog from './components/modal_window';
 
 import Carousel from './components/carousel.jsx'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import ExamplePdf from '../src/file1.pdf'
 
-import { disablePageScroll, enablePageScroll } from 'scroll-lock';
-
-
-
-// import { addLocale, useLocale } from 'ttag';
-// const locale = getLocale(); // fetch locale code from cookies, url, localStorage e.t.c
-
-// if (locale !== 'ru') {
-//     // load json file with translations
-//     const translationsObj = require(`../i18n/${locale}.po.json`);
-//     addLocale(locale, translationsObj);
-//     useLocale(locale);
-// }
-
-
-// var langState = 'en'
 
 function App() {
 
@@ -60,12 +36,6 @@ function App() {
   return (  
     
     <div className='background_pic_div'>
-       {/* <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
-          <option>Choose language</option>
-          <option value="uz">Uzbek</option>
-          <option value="ru">Russian</option>
-          <option value="en">English</option>
-        </select> */}
       <div className='background_pic_wrapper'>
         
       
@@ -109,12 +79,9 @@ function App() {
                       </div>
                     
                       <div className='ud_contact_data'>
-                        <p><a href="mailto:sliva73@bk.ru">sliva73@bk.ru</a></p>
+                        <p><a href="mailto:sliva73@bk.ru">setinform@bk.ru</a></p>
                       </div>
-                      
-                      
-                      
-                      
+                        
                     </div>
                   </div>
                   
@@ -138,17 +105,6 @@ function App() {
 
                 <div className='moving_image_div'>
                   <Movingimage_component /> 
-                                   
-                  {/* <InfiniteLooper speed='20'direction='left'>
-                  <div className="contentBlock contentBlock--one">
-                    <div></div>
-                    <img src={moving_pic_part_1} /> 
-
-                    <img src={moving_pic_part_2} />
-                    <img src={moving_pic_part_3} />
-                    <img src={moving_pic_part_4} />
-                  </div>
-                  </InfiniteLooper> */}
                 </div>
                 
                 <div className='middle_line'>
@@ -295,7 +251,7 @@ function App() {
                           </div>
                         </div>
                         <div className='bd_contact_data'>
-                          <p><a href="mailto:sliva73@bk.ru">sliva73@bk.ru</a></p>
+                          <p><a href="mailto:sliva73@bk.ru">setinform@bk.ru</a></p>
                         </div>
                     </div>
 
@@ -329,30 +285,12 @@ function App() {
                           {t('Address_data_bank_creds')}
                         </p>
                         </div>
-                    </div> 
-
-                    <div className='bd_contacts_row mobile_variant'>
-                      <div className='bd_contact_data'>
-                        <p>
-                          {t('Address_data')}
-                          <br></br>
-                          {t('Address_data_bank_creds')}
-                        </p>
-                        </div>
-                    </div>                 
+                    </div>
                                     
                 </div>
 
               </div>
 
-            
-
-                  {/* <MyDialog /> */}
-                
-               
-
-              
-              
             </div>
           
             
