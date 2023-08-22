@@ -19,7 +19,6 @@ import { useTranslation } from 'react-i18next';
 import background_city_pic from './img/city_background.jpg'
 
 import bottom_phone_pic from './img/phone_2.png'
-import bottom_email_pic from './img/email2.png'
 import bottom_map_pic from './img/map.png'
 
 import MyDialog from './components/modal_window';
@@ -150,10 +149,10 @@ function App() {
                   <div className='middle_jobicons_block'>
                     <div className='icon_and_text'>                 
                       <div className='middle_icon'>
-                        <img src={snowflake_img} alt="" />
+                        <img src={tubes_img} alt="" />
                       </div>
                       <p className='middle_icontext'>
-                      {t('conditioning')}
+                      {t('sewerage')}
                       </p>                      
                     </div>                    
                   </div>              
@@ -177,14 +176,13 @@ function App() {
                     </div>
                   </div>
                   <div className='middle_jobicons_2_half2'> 
-                    <div className='middle_jobicons_block'>
-                      
+                    <div className='middle_jobicons_block'>                     
                       <div className='icon_and_text'>                 
                         <div className='middle_icon'>
-                          <img src={tubes_img} alt="" />
+                          <img src={snowflake_img} alt="" />
                         </div>
                         <p className='middle_icontext'>
-                          {t('sewerage')}                           
+                          {t('conditioning')}                           
                         </p>                      
                       </div>                    
                     </div>
@@ -244,7 +242,7 @@ function App() {
                     <div className='bd_contacts_row'>
                     <div className='bd_contact_type'>
                           <div className='bd_contact_type_pic'>
-                            <img src={bottom_email_pic} alt="" />
+                            <img src={email_png} alt="" />
                           </div>
                           <div className='bd_contact_type_label'>
                             <p>E-mail</p>

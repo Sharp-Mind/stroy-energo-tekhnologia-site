@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import moving_pic from '../img/background_pic3.jpg'
+import moving_pic from '../img/background_pic4.png'
 
 export default class Movingimage_component extends Component {  
 

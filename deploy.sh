@@ -5,6 +5,6 @@ echo "Building app..."
 npm run build
 
 echo "Deploying files to server..."
-scp -r build/* portalset@95.163.237.10:/var/www/95.163.237.10/
+scp -r build/* portalset@134.0.116.32:/var/www/setinform.ru/
 
 echo "Done!"
