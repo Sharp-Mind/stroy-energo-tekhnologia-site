@@ -231,10 +231,10 @@
 
 @keyframes move {
   from {
-    left: 100%;
+    left: 200%;
   }
   to {
-    left: -100%;
+    left: -200%;
   }  
 }
 
