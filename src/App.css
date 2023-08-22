@@ -231,10 +231,10 @@
 
 @keyframes move {
   from {
-    left: 200%;
+    left: 100%;
   }
   to {
-    left: -200%;
+    left: -100%;
   }  
 }
 
@@ -613,6 +613,15 @@
 }
 
 @media (max-width: 900px) or (orientation: portrait) {
+
+  @keyframes move {
+    from {
+      left: 200%;
+    }
+    to {
+      left: -200%;
+    }  
+  }
  
   .hidden_on_mobile {
     display: none;
